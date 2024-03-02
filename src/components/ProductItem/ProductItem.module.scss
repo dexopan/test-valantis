@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 200px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px 0px #33333326;
+  padding: 10px;
+  &:hover {
+    background-color: rgb(253, 250, 247);
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  height: 70px;
+  margin: 5px 0;
+}
+
+.id {
+  font-size: 10px;
+  color: gray;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand {
+  background-color: rgb(244, 244, 244);
+  border-radius: 5px;
+}
+
+.price {
+  color: rgb(128, 23, 23);
+}
