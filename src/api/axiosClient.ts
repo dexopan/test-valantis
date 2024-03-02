@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios'
 import CryptoJS from 'crypto-js'
 import { getCurrentDate } from '../utils/utils'
@@ -10,7 +11,7 @@ export const $authHost = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 })
 
-const authInterceptor = (config) => {
+const authInterceptor = (config: any) => {
   config.headers['X-Auth'] = `${token}`
   return config
 }
