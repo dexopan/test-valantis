@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../../store/store'
+import { useAppDispatch } from '../../store/store'
 import { getProductsId, setAllIds } from '../../store/itemSlice'
 import styles from './Main.module.scss'
 import Brands from '../Brands/Brands'
@@ -9,13 +9,11 @@ import ProductList from '../ProductList/ProductList'
 
 const Main = () => {
   const dispatch = useAppDispatch()
-  const currentPage = useAppSelector((state) => state.page.page)
+
   const loadID = async () => {
-    console.log(currentPage)
     const result = await dispatch(getProductsId()).unwrap()
     const filteredData: string[] = Array.from(new Set(result))
     dispatch(setAllIds(filteredData))
-    console.log(filteredData.length)
   }
 
   useEffect(() => {
